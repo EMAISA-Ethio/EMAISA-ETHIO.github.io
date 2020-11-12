@@ -4,7 +4,7 @@
   <title>EMAISA &mdash; Ethiopian Medicine Advancement Intiative Student Association</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="icon" href="images/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
 
   <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -18,6 +18,9 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .mySlides {display:none;}
+    </style>
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -157,12 +160,15 @@
           <div class="container">
             <div class="row d-flex no-gutters align-items-stretch">
 
-              <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/img_1.jpg');" data-aos="fade-right" data-aos-delay="">
+              <div  data-aos="fade-right" data-aos-delay="">
+                <img class="mySlides" src="images/debut.jpg" style="width:100%">
+                <img class="mySlides" src="images/page2.jpg" style="width:100%">
+                <img class="mySlides" src="images/page3.jpg" style="width:100%">
               </div>
 
 
 
-              <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+              <div  data-aos="fade-left" data-aos-delay="">
                 <h2 class="mb-3 text-primary">Our Debut project</h2>
                 <p>For our first project we created a resource managment system for health care centers so that they can keep track of various assests including employees</p>
 
@@ -173,7 +179,7 @@
                   <li>Pharmacy</li>
                   <li>Volunteers.</li>
                   <li>Ministry of health</li>
-                  <p data-aos="fade-up" data-aos-delay="200"><a href="#contact-section" class="btn btn-outline-white border-w-2 btn-md">Visit</a></p>
+                  <p data-aos="fade-up" data-aos-delay="200"><a href="#site-section" title="To be hosted.Please check back soon :)" class="btn btn-outline-white border-w-2 btn-md debut">Visit</a></p>
                 </ul>
 
 
@@ -196,16 +202,23 @@
           <div class="row">
             <div class="col-12">
               <div class="row">
+
                 <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="">
                   <div class="block-counter-1">
-                    <span class="number text-primary"><span data-number="20">0</span>+</span>
-                    <span class="caption">Official members</span>
+                    <span class="number text-primary"><span data-number="2">0</span>+</span>
+                    <span class="caption">Partner Institutions</span>
                   </div>
                 </div>
                 <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                   <div class="block-counter-1">
                     <span class="number text-primary"><span data-number="3">0</span>+</span>
                     <span class="caption">Member institutes</span>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="">
+                  <div class="block-counter-1">
+                    <span class="number text-primary"><span data-number="20">0</span>+</span>
+                    <span class="caption">Official members</span>
                   </div>
                 </div>
               </div>
@@ -318,12 +331,12 @@
     
 
         <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-primary h4 mb-4">How can I be a member?</h3>
+          <h3 class="text-primary h4 mb-4">Who can be a member?</h3>
           <p>Any college student who supports our cause and is either a Medicine,Biomechanical Engineering, or computer Scientist major can be part of the team</p>
         </div>
 
         <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-primary h4 mb-4">How do I keep apply?</h3>
+          <h3 class="text-primary h4 mb-4">How do I apply?</h3>
           <p>If the university/academic institution is a member of the the intiative, one can apply through branch office there.</p>
         </div>
 
@@ -480,7 +493,7 @@
                 <h2 class="footer-heading mb-4">Features</h2>
                 <ul class="list-unstyled">
                   <li><a href="#">Press Releases</a></li>
-                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#testimonials-section">Testimonials</a></li>
                 </ul>
               </div>
 
@@ -514,7 +527,7 @@
               <a href="/main.html">
               <p class="copyright"><small>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved to EMAISA | This template is made with by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </small></p></a>
             </div>
@@ -538,6 +551,23 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 3000); // Change image every 2 seconds
+    }
+    </script>
+    
 
 </body>
 </html>
